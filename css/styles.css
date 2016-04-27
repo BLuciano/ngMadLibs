@@ -1,0 +1,113 @@
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  color: #444;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.container{
+	width: 700px;
+	margin: 0 auto;
+	padding: 0 1em;
+}
+
+.border{
+	border: 2px solid orange;
+}
+
+.spacing{
+	border-top: 0;
+	padding: 3em 0;
+}
+
+h1{
+	margin: 0;
+	margin-top: -15px;
+	padding: 0;
+	font-size: 2.75em;
+}
+
+h2{
+	padding-left: 2em;
+	margin: 0;
+	margin-bottom: 1em;
+}
+
+.smile-img, .logo-img{
+	text-align: center;
+	display: inline-block;
+	height: 100px;
+	margin: 0;
+	padding: 0;
+}
+
+.smile-img{
+	width: 20%;
+	float: left;
+	border-right: 0;
+}
+
+.smile-img img{
+	height: 75px;
+	margin-top: 10px;
+}
+
+.logo-img{
+	width: 80%;
+	vertical-align: bottom;
+}
+
+.logo-img img{
+	height: 50px;
+}
+
+.inputs{
+	text-align: center;
+}
+
+.inputs input{
+	padding: .75em;
+	margin: .5em;
+}
+
+.display{
+	padding: 3em 1em;
+}
+
+.display p{
+	line-height: 2em;
+}
+
+@media screen and (max-width: 725px){
+	.container{
+		width: 95%;
+		margin: 0 auto;
+	}
+}
+@media screen and (max-width: 500px){
+	.smile-img img{
+	height: 60px;
+	margin-top: 15px;
+	}
+
+	h1{
+		font-size: 2em;
+		margin-top: -10px;
+	}
+	h2{
+		padding-left: 2%;
+	}
+}	
+
+@media screen and (max-width: 400px){
+	.smile-img{
+		display: none;
+	}
+	.logo-img{
+		width: 100%;
+	}
+}
+
