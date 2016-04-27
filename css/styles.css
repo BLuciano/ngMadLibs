@@ -81,6 +81,11 @@ h2{
 	line-height: 2em;
 }
 
+.gender{
+	text-align: center;
+	margin: 1em 0;
+}
+
 @media screen and (max-width: 725px){
 	.container{
 		width: 95%;

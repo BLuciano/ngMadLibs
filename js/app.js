@@ -1,7 +1,7 @@
 angular.module('myApp', [])
   .controller('myCtrl', function($scope){
     $scope.inputs = {
-      femaleName : 'Female Name',
+      name : 'name',
       jobTitle : 'Job Title',
       tediousTask : 'Tedious Task',
       dirtyTask : 'Dirty Task',
@@ -11,4 +11,7 @@ angular.module('myApp', [])
       obnoxiuousCelebrity : 'Obnoxiuous Celebrity',
       hugeNumber : 'Huge Number'
     };
+    $scope.gender = 'male';
+    $scope.heShe = 'he';
+    $scope.hisHer = 'his';
   });
