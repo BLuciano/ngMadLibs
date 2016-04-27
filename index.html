@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="">
+<html lang="en" ng-app>
 <head>
   <meta charset="UTF-8">
   <title>NgMadLibs</title>
@@ -15,20 +15,28 @@
 
     <section class="userInput">
       <h2>Provide the following words:</h2>
-      
+      <input ng-init="femaleName ='female Name'" ng-model="femaleName" placeholder="Female Name">
+      <input ng-init="jobTitle ='job title'" ng-model="jobTitle" placeholder="Job Title">
+      <input ng-init="tediousTask ='tedious task'" ng-model="tediousTask" placeholder="Tedious Task">
+      <input ng-init="dirtyTask ='dirty task'" ng-model="dirtyTask" placeholder="Dirty Task">
+      <input ng-init="celebrity ='celebrity'" ng-model="celebrity" placeholder="Celebrity">
+      <input ng-init="uselessSkill ='useless skill'" ng-model="uselessSkill" placeholder="Useless Skill">
+      <input ng-init="adjective ='adjective'" ng-model="adjective" placeholder="Adjective">
+      <input ng-init="obnoxiuousCelebrity ='obnoxiuous celebrity'" ng-model="obnoxiuousCelebrity" placeholder="Obnoxiuous Celebrity">
+      <input ng-init="hugeNumber ='huge number'" ng-model="hugeNumber" placeholder="Huge Number">
     </section>
 
     <section class="display">
       <p>
-        {{femaleName}} was a {{job title}} who loved technology. Although she loved parts of her job, she absolutely hated  {{tedious task}} and {{dirty task}}. So, {{female_name}} met with her life mentor {{celebrity}} who told her to learn how to {{useless skill}} with Thinkful. Thinkful didn't offer a course on {{useless skill}} so she studied programming instead.
+        <strong>{{femaleName}}</strong> was a <strong>{{jobTitle}}</strong> who loved technology. Although she loved parts of her job, she absolutely hated <strong>{{tediousTask}}</strong> and <strong>{{dirtyTask}}</strong>. So, <strong>{{femaleName}}</strong> met with her life mentor <strong>{{celebrity}}</strong> who told her to learn how to <strong>{{uselessSkill}}</strong> with Thinkful. Thinkful didn't offer a course on <strong>{{uselessSkill}}</strong> so she studied programming instead.
       </p> 
       <p>
-        What a great decision! With her new skills, {{female name}} built a(n) {{adjective}} robot named {{obnoxiuous celebrity}} that not only loved {{dirty task}} but did it {{huge number}} faster.
+        What a great decision! With her new skills, <strong>{{femaleName}}</strong> built a(n) <strong>{{adjective}}</strong> robot named <strong>{{obnoxiuousCelebrity}}</strong> that not only loved <strong>{{dirtyTask}}</strong> but did it <strong>{{hugeNumber}}</strong> times faster.
       </p> 
     </section>
   </div>
 
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
   <script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
