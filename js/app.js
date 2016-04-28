@@ -1,17 +1,32 @@
-angular.module('myApp', [])
+angular.module('myApp', ['ngMessages'])
   .controller('myCtrl', function($scope){
-    $scope.inputs = {
-      name : 'name',
-      jobTitle : 'Job Title',
-      tediousTask : 'Tedious Task',
-      dirtyTask : 'Dirty Task',
-      celebrity : 'Celebrity',
-      uselessSkill : 'Useless Skill',
-      adjective : 'Adjective',
-      obnoxiuousCelebrity : 'Obnoxiuous Celebrity',
-      hugeNumber : 'Huge Number'
+    var setValues = function(){
+      $scope.inputs = {
+        name : '',
+        jobTitle : '',
+        tediousTask : '',
+        dirtyTask : '',
+        celebrity : '',
+        uselessSkill : '',
+        adjective : '',
+        obnoxiuousCelebrity : '',
+        hugeNumber : ''
+      };
+      $scope.gender = 'male';
+      $scope.heShe = 'he';
+      $scope.hisHer = 'his';
+      $scope.formValid = false;
     };
-    $scope.gender = 'male';
-    $scope.heShe = 'he';
-    $scope.hisHer = 'his';
+
+    setValues();
+
+    $scope.submit = function(){
+      if(!$scope.userForm.$error.required){
+        $scope.formValid = true;
+      }
+    };
+
+    $scope.reset = function reset(){
+      setValues();
+    };
   });
