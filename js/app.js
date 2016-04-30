@@ -1,4 +1,4 @@
-angular.module('myApp', ['ngMessages'])
+angular.module('myApp', ['ngMessages', 'ngAnimate'])
   .controller('myCtrl', function($scope){
     var setValues = function(){
       $scope.inputs = {

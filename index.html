@@ -18,7 +18,7 @@
       </div>
     </header>
 
-    <section ng-hide="formValid" class="userInput border spacing">
+    <section ng-show="!formValid" class="userInput border spacing">
       <h2>Provide the following words:</h2>
       <form action="" class="gender">
         <input ng-model="gender" ng-click="heShe = 'he'; hisHer = 'his'" type="radio" name="gender" value="male"> Male
@@ -28,7 +28,7 @@
       <div class="inputs">
         <form name="userForm" ng-submit="submit()" novalidate>
           <input type="text" required name="name" ng-model="inputs.name" placeholder="Name">
-          <input type="text" name="jobTitle" ng-model="inputs.jobTitle" placeholder="Job Title">
+          <input type="text" required name="jobTitle" ng-model="inputs.jobTitle" placeholder="Job Title">
           <input type="text" required name="tediousTask" ng-model="inputs.tediousTask" placeholder="Tedious Task">
           <input type="text" required name="dirtyTask" ng-model="inputs.dirtyTask" placeholder="Dirty Task">
           <input type="text" required name="celebrity" ng-model="inputs.celebrity" placeholder="Celebrity">
@@ -41,33 +41,33 @@
         </form>
       </div>
 
-      <div class="errors">
+      <div ng-show="userForm.$submitted" class="errors">
         <p ng-if="userForm.$submitted" ng-messages="userForm.name.$error">
-          <span ng-message="required">Please enter a name!</span>
+          <span class="error" ng-message="required">Please enter a name!</span>
         </p>
         <p ng-if="userForm.$submitted" ng-messages="userForm.jobTitle.$error">
-          <span ng-message="required">Please enter a job title!</span>
+          <span class="error" ng-message="required">Please enter a job title!</span>
         </p>
         <p ng-if="userForm.$submitted" ng-messages="userForm.tediousTask.$error">
-          <span ng-message="required">Please enter a tedious task!</span>
+          <span class="error" ng-message="required">Please enter a tedious task!</span>
         </p>
         <p ng-if="userForm.$submitted" ng-messages="userForm.dirtyTask.$error">
-          <span ng-message="required">Please enter a dirty task!</span>
+          <span class="error" ng-message="required">Please enter a dirty task!</span>
         </p>
         <p ng-if="userForm.$submitted" ng-messages="userForm.celebrity.$error">
-          <span ng-message="required">Please enter a celebrity name!</span>
+          <span class="error" ng-message="required">Please enter a celebrity name!</span>
         </p>
         <p ng-if="userForm.$submitted" ng-messages="userForm.uselessSkill.$error">
-          <span ng-message="required">Please enter a useless skill!</span>
+          <span class="error" ng-message="required">Please enter a useless skill!</span>
         </p>
         <p ng-if="userForm.$submitted" ng-messages="userForm.adjective.$error">
-          <span ng-message="required">Please enter an adjective!</span>
+          <span class="error" ng-message="required">Please enter an adjective!</span>
         </p>
         <p ng-if="userForm.$submitted" ng-messages="userForm.obnoxiuousCelebrity.$error">
-          <span ng-message="required">Please enter the name of an obnoxious celebrity!</span>
+          <span class="error" ng-message="required">Please enter the name of an obnoxious celebrity!</span>
         </p>
         <p ng-if="userForm.$submitted" ng-messages="userForm.hugeNumber.$error">
-          <span ng-message="required">Please choose a huge number!</span>
+          <span class="error" ng-message="required">Please choose a huge number!</span>
         </p>
       </div>
     </section>
@@ -85,6 +85,7 @@
   </div>
 
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.js"></script>
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.js"></script>
   <script type="text/javascript" src="js/app.js"></script>
 </body>

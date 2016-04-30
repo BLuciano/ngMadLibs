@@ -95,12 +95,97 @@ h2{
 .errors{
 	color: red;
 	text-align: center;
+	-webkit-transition: all .5s linear;
+	transition: all .5s linear;
 }
 
 input.submitBtn, button.submitBtn{
 	display: block;
 	margin: 2em auto 0 auto;
 }
+
+/*******ANIMATIONS*******/
+.userInput{
+	-webkit-transition: all .5s linear ;
+	transition: all .5s linear;
+}
+
+.userInput.ng-hide-add,
+.userInput.ng-hide-remove {
+  display: block !important;
+}
+
+.userInput.ng-hide-remove,
+.userInput.ng-hide-add.ng-hide-add-active {
+  opacity: 0;
+}
+
+.userInput.ng-hide-remove.ng-hide-remove-active,
+.userInput.ng-hide-add {
+  opacity: 1;
+}
+
+.display{
+	-webkit-transition: all .5s linear .6s;
+	transition: all .5s linear .6s;
+}
+
+.display.ng-hide-add,
+.display.ng-hide-remove {
+  display: block !important;
+}
+
+.display.ng-hide-remove,
+.display.ng-hide-add.ng-hide-add-active {
+  opacity: 0;
+  -webkit-transition: none;
+	transition: none;
+}
+
+.display.ng-hide-remove.ng-hide-remove-active,
+.display.ng-hide-add {
+  opacity: 1;
+  -webkit-transition: all .5s linear .6s;
+	transition: all .5s linear .6s;
+}
+
+.errors.ng-hide-add,
+.errors.ng-hide-remove {
+  display: block !important;
+}
+
+.errors.ng-hide-remove,
+.errors.ng-hide-add.ng-hide-add-active {
+  opacity: 0;
+  margin-top: 150px;
+}
+
+.errors.ng-hide-remove.ng-hide-remove-active,
+.errors.ng-hide-add {
+  opacity: 1;
+  margin-top: 0;
+}
+
+.error{
+	-webkit-transition: all .25s linear;
+	transition: all .25s linear;
+	display: block;
+}
+
+.error.ng-enter,
+.error.ng-leave.ng-leave-active{
+	max-height: 0;
+	opacity: 0;
+}
+
+.error.ng-leave,
+.error.ng-enter.ng-enter-active{
+	max-height: 1em;
+	opacity: 1;
+}
+
+
+/****************MEDIA QUERIES*********/
 
 @media screen and (max-width: 725px){
 	.container{
